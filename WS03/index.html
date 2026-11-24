@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+            body{background-color: bisque;}
+            img {width: 30%;}
+            h1 {
+              color: green;
+              font-size: 2rem;}
+              .transition-button {
+        background-color: lightblue;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      .transition-button:hover {
+        background-color: lightcoral;
+      }
+            .content-box {
+            width: 30%;
+            padding: 20px;
+            margin: 10px;
+            background-color: grey;
+            border: 1px solid palevioletred;}
+            table {
+            width: 50%;
+            border-collapse: collapse;}
+            form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 35%;}
+            label {
+      font-weight: bold;}
+      input[type="text"], input[type="email"] {
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+            
+      .animation-box {
+        width: 150px;
+        height: 100px;
+        background-color: rgb(238, 144, 147);
+        position: relative;
+        animation: move 2s infinite alternate;
+      }
+      
+      @keyframes move {
+        from {
+          left: 0;
+        }
+        to {
+          left: 100px;
+        }
+      }
+      .filter-image {
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+      }
+      
+      .filter-image:hover {
+        filter: grayscale(0%);
+      }
+     .pseudo-list li:nth-child(odd) {
+        background-color: rgb(95, 8, 8);
+      }
+      
+      .pseudo-list li:nth-child(even) {
+        background-color: rgb(9, 45, 20);
+      }
+       .quote {
+        width: 20%;
+        position: relative;
+        padding-left: 20px;
+        font-style: italic;
+      }
+      
+      .quote::before {
+        content: '“';
+        font-size: 40px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: rgb(58, 1, 1);
+      }
+      .quote::after {
+        content: '“';
+        font-size: 40px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        color: rgb(49, 1, 1);
+      }
+      </style> 
+        <title>My First HTML Page</title>
+    </head>
+    <body>
+        <h1>Welcome to Aleksandra's Page</h1>
+        <p>I'm student in Laurea</p>
+        <img src="aleksandrakuva.png" alt="my picture" class="filter-image">
+        <h2 style="color: palevioletred;">My hobbies</h2>
+        <div class="content-box">
+        <ul>
+            <li>Meditation</li>
+            <li>Violin</li>
+            <li>Reading</li>
+        </ul>
+    </div>
+    <div class="animation-box">
+        <ul class="pseudo-list">
+        <li>Advent</li>
+        <li>Cleaning</li>
+        <li>Packing presents</li>
+        <li>Christmas</li>
+      </ul>
+    </div>
+        <a href="https://www.whychristmas.com/cultures/">Visit I love Christmas</a>
+        <table>
+        <style>th {text-align: left;}</style>
+            <tr>
+                <th>Name</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>Course A</td>
+                <td>Incomplete</td>
+            </tr>
+            <tr>
+                <td>Course B</td>
+                <td>Complete</td>
+            </tr>
+            </table>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <input type="submit" value="Submit">
+            </form>
+            <blockquote class="quote">
+        At Christmas all roads lead home.
+      </blockquote>
+        <button class="transition-button">Hover me</button>
+    </body>
+    </html>
